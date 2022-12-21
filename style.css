@@ -61,6 +61,7 @@ button {
   cursor: pointer;
   width: 100px;
   height: 40px;
+  border: none;
   border-radius: 15px;
   font-weight: var(--bold-font);
 }
@@ -111,10 +112,11 @@ button {
 
 /* Theme Toggle */
 .theme-toggle-wrapper {
-  position: absolute;
-  right: 20px;
+  position: relative;
+  left: 30px;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .theme-slider {
@@ -181,10 +183,17 @@ button {
   color: var(--sub-black-color);
 }
 
-.search-wrapper input {
+.search-input {
   height: 48px;
   border: none;
+  padding: 0 12px;
   background: transparent;
+  font-size: var(--medium-font);
+  color: var(--point-black-color);
+}
+
+.search-input.active {
+  color: var(--main-white-color);
 }
 
 /* Sort DropDown */
@@ -232,7 +241,7 @@ button {
   margin-bottom: 20px;
 }
 
-.title-wrapper > input {
+.form-title-input {
   width: 100%;
   height: 60px;
   padding: 0 24px;
@@ -240,9 +249,15 @@ button {
   border-radius: 15px;
   background: var(--main-white-color);
   font-size: var(--medium-font);
+  transition: background 500ms ease-in-out;
 }
 
-.contents-wrapper > textarea {
+.form-title-input.active {
+  background: var(--point-black-color);
+  color: var(--main-white-color);
+}
+
+.form-contents-textarea {
   resize: none;
   width: 100%;
   height: 295px;
@@ -251,6 +266,12 @@ button {
   border-radius: 15px;
   background: var(--main-white-color);
   font-size: var(--medium-font);
+  transition: background 500ms ease-in-out;
+}
+
+.form-contents-textarea.active {
+  background: var(--point-black-color);
+  color: var(--main-white-color);
 }
 
 .note-wrapper {
@@ -298,20 +319,45 @@ button {
 
 /* Footer Area */
 .footer-wrapper {
+  position: relative;
   display: flex;
   justify-content: right;
-  width: 580px;
+  min-width: 580px;
   height: 70px;
   padding: 15px 0;
 }
 
-.move-form-button {
-  border: none;
+.move-form-button,
+.add-note-button {
   background: var(--main-black-color);
   color: var(--main-white-color);
 }
 
-.move-form-button.active {
+.move-form-button.active,
+.add-note-button.active {
   border: 1px solid var(--main-white-color);
   background: var(--main-point-color);
+}
+
+.add-note-button {
+  margin: 0 12px;
+}
+
+.move-back-button {
+  background: var(--main-white-color);
+  color: var(--main-black-color);
+  transition: background 500ms ease-in-out;
+}
+
+.move-back-button.active {
+  background: var(--main-black-color);
+  color: var(--main-white-color);
+}
+
+.remove-note-button {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  background: var(--point-red-color);
+  color: var(--main-white-color);
 }

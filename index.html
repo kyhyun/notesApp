@@ -34,10 +34,10 @@
       <section class="main-container">
         <div class="search-wrapper">
           <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-          <input type="text" />
+          <input type="text" class="search-input" placeholder="Search..." />
         </div>
 
-        <!-- Sort DropDown List -->
+        <!-- Sort DropDown -->
         <label class="sort-dropdown-wrapper">
           <select name="sort" id="sort" class="select">
             <option value="recent-create" selected>최근생성순</option>
@@ -47,24 +47,34 @@
           <i class="fa-solid fa-angle-down"></i>
         </label>
       </section>
+
       <!-- Note Form -->
-      <!-- <form class="note-form">
+      <form class="note-form">
         <div class="title-wrapper">
-          <input type="text" placeholder="제목을 입력해주세요. (공백 포함 15자 제한)" />
+          <input
+            type="text"
+            class="form-title-input"
+            placeholder="제목을 입력해주세요. (공백 포함 15자 제한)"
+            maxlength="15"
+          />
         </div>
         <div class="contents-wrapper">
-          <textarea type="text" row="5" cols="10" placeholder="내용을 입력해주세요."></textarea>
+          <textarea type="text" class="form-contents-textarea" placeholder="내용을 입력해주세요."></textarea>
         </div>
-      </form> -->
+      </form>
 
       <!-- Note Component -->
       <section class="note-wrapper">
-        <div class="note-contents">
+        <!-- <div class="note-contents">
           <p class="note-title">코어 자바스크립트 스터디</p>
           <p class="note-time-stamp">last edited a few seconds ago</p>
         </div>
-        <!-- <div class="note-contents">
+        <div class="note-contents">
           <p class="note-title">자유 프로젝트 작업하기</p>
+          <p class="note-time-stamp">last edited a few seconds ago</p>
+        </div>
+        <div class="note-contents">
+          <p class="note-title">초코 산책시키기</p>
           <p class="note-time-stamp">last edited a few seconds ago</p>
         </div>
         <div class="note-contents">
@@ -75,11 +85,12 @@
 
       <!-- Footer -->
       <footer class="footer-wrapper">
-        <button type="button" class="move-form-button">새 노트</button>
-        <!-- <div class="footer-button-wrapper">
+        <button type="button" class="remove-note-button">삭제하기</button>
+        <!-- <button type="button" class="move-form-button">새 노트</button> -->
+        <div class="footer-button-wrapper">
           <button type="submit" class="add-note-button">추가하기</button>
           <button type="button" class="move-back-button">뒤로가기</button>
-        </div> -->
+        </div>
       </footer>
     </div>
   </body>
