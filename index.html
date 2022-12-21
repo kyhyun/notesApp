@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/291d90d700.js" crossorigin="anonymous"></script>
+    <script defer src="main.js"></script>
+    <title>My Notes App</title>
+  </head>
+  <body>
+    <div class="note-container">
+      <div class="header-container">
+        <header class="header-info-wrapper">
+          <h1 class="header-title">My Note</h1>
+          <p class="header-sub-title">Task notes and never forgot</p>
+        </header>
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle-wrapper">
+          <i class="fa-solid fa-sun fa-xl"></i>
+          <!-- <i class="fa-solid fa-moon fa-xl"></i> -->
+          <div class="toggle-thumb"></div>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <section class="main-container">
+        <div class="search-wrapper">
+          <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+          <input type="text" />
+        </div>
+
+        <!-- Sort DropDown List -->
+        <label class="sort-dropdown-wrapper">
+          <select name="sort" id="sort" class="select">
+            <option value="recent-create" selected>최근생성순</option>
+            <option value="recent-update">최근수정순</option>
+            <option value="ascending">오름차순</option>
+          </select>
+          <i class="fa-solid fa-angle-down"></i>
+        </label>
+      </section>
+      <!-- Note Form -->
+      <!-- <form class="note-form">
+        <div class="title-wrapper">
+          <input type="text" placeholder="제목을 입력해주세요. (공백 포함 15자 제한)" />
+        </div>
+        <div class="contents-wrapper">
+          <textarea type="text" row="5" cols="10" placeholder="내용을 입력해주세요."></textarea>
+        </div>
+      </form> -->
+
+      <!-- Note Component -->
+      <section class="note-wrapper">
+        <div class="note-contents">
+          <p class="note-title">코어 자바스크립트 스터디</p>
+          <p class="note-time-stamp">last edited a few seconds ago</p>
+        </div>
+        <!-- <div class="note-contents">
+          <p class="note-title">자유 프로젝트 작업하기</p>
+          <p class="note-time-stamp">last edited a few seconds ago</p>
+        </div>
+        <div class="note-contents">
+          <p class="note-title">다니 챙기기</p>
+          <p class="note-time-stamp">last edited a few seconds ago</p>
+        </div>
+        <div class="note-contents">
+          <p class="note-title">초코 산책시키기</p>
+          <p class="note-time-stamp">last edited a few seconds ago</p>
+        </div> -->
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer-wrapper">
+        <button type="button" class="move-form-button">새 노트</button>
+        <!-- <div class="footer-button-wrapper">
+          <button type="submit" class="add-note-button">추가하기</button>
+          <button type="button" class="move-back-button">뒤로가기</button>
+        </div> -->
+      </footer>
+    </div>
+  </body>
+</html>
